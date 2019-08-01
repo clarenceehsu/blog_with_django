@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>{{ post.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/details/assets/css/main.css" />
+		<link rel="stylesheet" href="/static/details/assets/css/github.css">
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="../../blog">< Back</a></div>
+		</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="{{ post.img }}" alt="" />
+						</div>
+						<header class="special">
+							<h2>{{ post.title }}</h2>
+							<p>{{ post.created_time }}</p>
+						</header>
+						<div class="content">
+							{{ post.body|safe }}
+						</div>
+					</section>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					&copy; Copyright Zeesain Tsui. All rights Reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/details/assets/js/jquery.min.js"></script>
+			<script src="/static/details/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/static/details/assets/js/skel.min.js"></script>
+			<script src="/static/details/assets/js/util.js"></script>
+			<script src="/static/details/assets/js/main.js"></script>
+
+	</body>
+</html>
