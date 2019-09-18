@@ -1,54 +1,53 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
 
-<html>
-	<head>
-		<title>{{ post.title }}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/static/details/assets/css/main.css" />
-		<link rel="stylesheet" href="/static/details/assets/css/github.css">
-	</head>
-	<body>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>{{ post.title }} - Zeesain</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		<!-- Header -->
-		<header id="header">
-			<div class="logo"><a href="../../blog">< Back</a></div>
-		</header>
+{% include 'base-1.html' %}
 
-		<!-- Main -->
-			<section id="main">
-				<div class="inner">
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+                
+                <article class="column large-full entry format-standard">
 
-				<!-- One -->
-					<section id="one" class="wrapper style1">
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img src="{{ post.img }}" alt="">
+                        </div>
+                    </div>
 
-						<div class="image fit flush">
-							<img src="{{ post.img }}" alt="" />
-						</div>
-						<header class="special">
-							<h2>{{ post.title }}</h2>
-							<p>{{ post.created_time }}</p>
-						</header>
-						<div class="content">
-							{{ post.body|safe }}
-						</div>
-					</section>
-				</div>
-			</section>
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                        {{ post.title }}
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="date">{{ post.created_time }}</li>
+                            <li class="cat-links">
+                                <a href="#0">{{ post.category.name }}</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end entry__header -->
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="copyright">
-					&copy; Copyright Zeesain Tsui. All rights Reserved.
-				</div>
-			</footer>
+                    <div class="entry__content">
+                        {{ post.body|safe }}
+                    </div> <!-- end entry content -->
 
-		<!-- Scripts -->
-			<script src="/static/details/assets/js/jquery.min.js"></script>
-			<script src="/static/details/assets/js/jquery.poptrox.min.js"></script>
-			<script src="/static/details/assets/js/skel.min.js"></script>
-			<script src="/static/details/assets/js/util.js"></script>
-			<script src="/static/details/assets/js/main.js"></script>
+                </article> <!-- end column large-full entry-->
 
-	</body>
-</html>
+
+                <div class="comments-wrap">
+
+                </div> <!-- end comments-wrap -->
+            </main>
+
+        </div> <!-- end s-content -->
+        
+{% include 'base-2.html' %}

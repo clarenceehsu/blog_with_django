@@ -8,5 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('gallery/', gallery_views.index),
     path('blog', include('blog.urls', namespace='blog')),
-    path('', frontpage_views.index),
+    path('', frontpage_views.index)
 ]

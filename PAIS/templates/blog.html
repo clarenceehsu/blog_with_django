@@ -1,154 +1,103 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Zeesain Tsui's Blog</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<link rel="shortcut icon" href="/static/assets/favicon.ico">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="/static/blog/assets/fonts/fontawesome/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="/static/blog/assets/fonts/pe-icon/pe-icon.css">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="/static/blog/assets/vendors/bootstrap/grid.css">
-		<link rel="stylesheet" type="text/css" href="/static/blog/assets/vendors/magnific-popup/magnific-popup.min.css">
-		<link rel="stylesheet" type="text/css" href="/static/blog/assets/vendors/swiper/swiper.css">
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="/static/blog/assets/css/main.css"><!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	
-	<body>
-		<div class="page-wrap" id="root">
-			
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="header__inner">
-					<div class="header__logo"></div>
-					<div class="navbar-toggle" id="fs-button">
-						<div class="navbar-icon"><span></span></div>
-					</div>
-				</div>
-				
-				<!-- fullscreenmenu__module -->
-				<div class="fullscreenmenu__module" trigger="#fs-button">
-					
-					<!-- overlay-menu -->
-					<nav class="overlay-menu">
-						
-						<!--  -->
-						<ul class="wil-menu-list">
-							<li><a href="\">Home 首页</a>
-							</li>
-							<li><a href="..\blog">Blog 博客</a>
-							</li>
-							<li><a href="#">Projects 项目</a>
-							</li>
-							<li class="current-menu-item"><a href="#">About 关于</a>
-							</li>
-							<li><a href="contact.html">Contact 联系</a>
-							</li>
-						</ul><!--  -->
-						
-					</nav><!-- End / overlay-menu -->
-					
-				</div><!-- End / fullscreenmenu__module -->
-				
-			</header><!-- End / header -->
-			
-			<!-- Content-->
-			<div class="wil-content">
-				
-				<!-- Section -->
-				<section class="awe-section2">
-					<div class="container">
-						
-						<!-- page-title -->
-						<div class="page-title pb-40">
-							<h2 class="page-title__title">Zeesain Tsui's</p>Blog</h2>
-							<p class="page-title__text">大梦初醒啊。</p>
-							<div class="page-title__divider"></div>
-						</div><!-- End / page-title -->
-						
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-				
-				<!-- Section -->
-				<section class="awe-section bg-gray">
-					<div class="container">
-						<div class="grid-css grid-css--masonry" data-col-lg="2" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
-							<div class="grid__inner">
-								<div class="grid-sizer"></div>
+<html class="no-js" lang="en">
+<head>
 
-								<!-- xxxxxxxxxxx -->
-								{% for post in post_list %}
-									<div class="grid-item">
-										<div class="grid-item__inner">
-											<div class="grid-item__content-wrapper">
-												
-												<!-- post -->
-												<div class="post">
-													<div class="post__media"><a href="{{ post.get_absolute_url }}"><img src="{{ post.index_img }}" alt=""/></a></div>
-													<div class="post__body">
-														<div class="post__meta"><span class="date">{{ post.created_time }}</span><span class="author"><a href="#">{{ post.category.name }}</a></span></div>
-														<h2 class="post__title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-														<p class="post__text">{{ post.excerpt }}</p>
-														<a class="md-btn md-btn--outline-primary" href="{{ post.get_absolute_url }}">read more
-														</a>
-													</div>
-												</div><!-- End / post -->
-											</div>
-										</div>
-									</div>
-								{% empty %}
-									<div class="no-post">暂时还没有发布的文章！</div>
-								{% endfor %}
-								<!-- xxxxxxxxxxx -->
-								
-							</div>
-						</div>
-						<div class="awe-text-center mt-50">
-							<a class="md-btn md-btn--outline-primary " href="#">Load more
-							</a>
-						</div>
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-			</div>
-			<!-- End / Content-->
-			
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-6 ">
-							<p class="footer__coppy">2019 &copy; Copyright <a href="#">Zeesain Tsui</a>. All rights Reserved.</p>
-						</div>
-					</div>
-				</div>
-			</div><!-- End / footer -->
-			
-		</div>
-		<!-- Vendors-->
-		<script type="text/javascript" src="/static/blog/assets/vendors/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/swiper/swiper.jquery.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/menu/menu.js"></script>
-		<script type="text/javascript" src="/static/blog/assets/vendors/typed/typed.min.js"></script>
-		<!-- App-->
-		<script type="text/javascript" src="/static/blog/assets/js/main.js"></script>
-	</body>
-</html>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Zeesain Tsui's Blog</title>
+    <meta name="description" content="A Zeesain Tsui's Blog.">
+    <meta name="author" content="Zeesain Tsui">
+
+{% include 'base-1.html' %}
+
+        <div class="s-content">
+            
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+    
+                    <div class="grid-sizer"></div>
+
+                    <article class="masonry__brick entry format-quote animate-this">
+                            
+                        <div class="entry__thumb">
+                            <blockquote>
+                                <p>波光里的艳影，是夕阳下的新娘。</p>
+    
+                                <cite>徐志摩</cite>
+                            </blockquote>
+                        </div>   
+        
+                    </article> <!-- end article -->
+
+					<!-- xxxxxxxxxxx -->
+					{% for post in post_list %}
+                    <article class="masonry__brick entry format-standard animate-this">
+                            
+                        <div class="entry__thumb">
+                            <a href="{{ post.get_absolute_url }}" class="entry__thumb-link">
+                                <img src="{{ post.index_img }}" 
+                                        alt="">
+                            </a>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+    
+                                <h2 class="entry__title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">{{ post.category.name }}</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="">{{ post.created_time }}</a>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                {{ post.excerpt }}
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+                    {% empty %}
+						<div class="no-post">暂时还没有发布的文章！</div>
+					{% endfor %}
+                    <!-- xxxxxxxxxxx -->
+    
+                </div> <!-- end masonry -->
+
+            </div> <!-- end masonry-wrap -->
+
+            <div class="row">
+                <div class="column large-full">
+                    <nav class="pgn">
+                        <ul>
+                        {% if post_num == 1 %}
+                            <li><span class="pgn__num current">1</span></li>
+                        {% endif %}
+                        {% if list_num != 1 and list_num != post_num %}
+                            <li><a class="pgn__prev" href="/blog/{{list_num|add:-1}}">Prev</a></li>
+                        {% endif %}
+                        {% for i in post_num %}
+                            {% if i == list_num %}
+                                <li><span class="pgn__num current">{{ i }}</span></li>
+                            {% else %}
+                                <li><a class="pgn__num" href="/blog/{{ i }}">{{ i }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if list_num != final_num %}
+                            <li><a class="pgn__next" href="/blog/{{list_num|add:1}}">Next</a></li>
+                        {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div> <!-- end s-content -->
+
+{% include 'base-2.html' %}

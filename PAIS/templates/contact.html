@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Contact - Zeesain</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+{% include 'base-1.html' %}
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+                
+                <section class="column large-full entry format-standard">
+
+                    <div class="media-wrap">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1466096115517-bceecbfb6fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                        </div>
+                    </div>
+
+                    <div class="content__page-header">
+                        <h1 class="display-1">
+                        天涯若比邻。
+                        </h1>
+                    </div> <!-- end content__page-header -->
+
+                    <h3 class="h2">联系</h3>
+        
+                    <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
+                        <fieldset>
+    
+                            <div class="form-field">
+                                <input name="cName" id="cName" class="full-width" placeholder="Your Name" value="" type="text">
+                            </div>
+    
+                            <div class="form-field">
+                                <input name="cEmail" id="cEmail" class="full-width" placeholder="Your Email" value="" type="text">
+                            </div>
+    
+                            <div class="form-field">
+                                <input name="cWebsite" id="cWebsite" class="full-width" placeholder="Website" value="" type="text">
+                            </div>
+    
+                            <div class="message form-field">
+                                <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message"></textarea>
+                            </div>
+    
+                            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large full-width" value="Send Message" type="submit">
+    
+                        </fieldset>
+                    </form> <!-- end form -->
+
+                </section>
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+{% include 'base-2.html' %}
