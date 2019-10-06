@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>LAB - Zeesain</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+{% include 'base-1.html' %}
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+                
+                <section class="column large-full entry format-standard">
+
+                    <div class="media-wrap">
+                        <div>
+                            <img src="images/thumbs/about/about-1000.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="content__page-header">
+                        <h1 class="display-1">
+                        爬虫功能性测试页面
+                        </h1>
+                    </div> <!-- end content__page-header -->
+
+                    <div class="entry__content">
+                        {% for n in list %}
+                        <h3>No.{{ n.index }} - {{ n.name }}</h3>
+                        <ul>
+                            <li>评分：<strong>{{ n.rate }}</strong></li>
+                            <li>简介：<strong>{{ n.quote }}</strong></li>
+                        </ul>
+                        {% empty %}
+						<h2>对不起，暂无数据！</h2>
+					    {% endfor %}
+                    </div>
+                
+                </section>
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+{% include 'base-2.html' %}

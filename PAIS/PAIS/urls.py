@@ -3,6 +3,7 @@ from django.urls import path, include
 from gallery import views as gallery_views
 from blog import views as blog_views
 from frontpage import views as frontpage_views
+from django.urls import re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
